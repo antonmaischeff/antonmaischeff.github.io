@@ -1,7 +1,22 @@
+body { overflow: hidden }
+input{ display: none }
 h1{
+	left: 0.5em;
+	top: 0em;
 	position: absolute;
+	transition: transform 10s, left 5s, top 5s;
+	transform: rotate(0deg);
 }
-.rotate360 {
-   transition: transform 10s;
-   transform: rotate(/*over*/9000deg);
+input:checked + h1 {
+	left: 1em;
+	top: 7em;
+	transform: rotate(/*over*/3600deg);
+	color: white;
+	width: 9em;
+	overflow: hidden;
+	text-indent: -23em;
+}
+input:checked + h1::after {
+	content: '¯\_(ツ)_/¯';
+	color: red;
 }
