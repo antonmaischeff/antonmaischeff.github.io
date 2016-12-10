@@ -3,5 +3,5 @@ h1{
 }
 .rotate360 {
    transition: transform 10s;
-   transform: rotate(3600deg);
+   transform: rotate(/*over*/9000deg);
 }
