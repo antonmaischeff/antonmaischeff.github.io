@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>проба jq</title>
+	<title>мой пробный сайт</title>
 	<meta charset="utf-8">
-	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
 </head>
 <body>
 
 
-<h1>тут ничего нет пока, но можно клацнуть на эту надпись</h1>
-
+<h1>мой образец сайта. </h1>
+<p>пока ведуться подготовительные работы</p>
+<p>тем более, я еще с гит не разобрался</p>
+<img src="http://risovach.ru/upload/2014/06/mem/sloupok_54123461_orig_.jpg">
 <script type="text/javascript">
 	
 $("h1").click(function(){
 		$("h1").animate({top: "220px"}, 2000);
 		$("h1").animate({left: "100px"}, 2000);
-		$("h1").addClass('rotate360');
-		$("h1").css("color", "red");
+
+		$("h1").css("color", "blue");
 		$("h1").html("¯\\_(ツ)_/¯");
 	})
 
