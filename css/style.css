@@ -1,3 +1,10 @@
-h1{
-	position: relative;
+.b{
+	border: 5px solid #C7D0CC;
+	background-color: #398973;
+
+	border-radius: 10%;
 }
+body{
+	background-color: #D5D5D5;
+}
+
