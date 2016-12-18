@@ -2,10 +2,22 @@
 <html>
 <head>
 	<title>life</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
 </head>
 <body>
 
+<div class="container starter-template marg" role="main">
+	<div class="jumbotron">
+		<p id="fill"></p>
+		<p>
+			<button type="button" class="btn btn-lg btn-primary">
+				сделать ход
+			</button>
+		</p>
+	</div>
+</div>
 
 
 
@@ -13,9 +25,47 @@
 
 
 <script type="text/javascript">
-	
+
+var	plan = ["############################",
+			"#      #    #      o      ##",
+			"#                          #",
+			"#          #####           #",
+			"##         #   #    ##     #",
+			"###           ##     #     #",
+			"#           ###      #     #",
+			"#   ####                   #",
+			"#   ##       o             #",
+			"# o  #         o       ### #",
+			"#    #                     #",
+			"############################"];
+
+//мировой объект
+var WORLD={};
+//карта мира
+WORLD.plan = plan;
+//метод вывода
+WORLD.toString = function(){
+
+
+	var m="";
+	for(num in WORLD.plan){
+		m += (m + WORLD.plan[num] + "<br>");
+	}
+	return m;
+};
+//сделать ход. производит действия, и перерисовывает мир
+WORLD.turn = function(){};
+
+
+
+
+
+$("#fill").html(WORLD.toString());
+
 
 
 </script>
+чет тут поламалось,  но чинить его сегодня я конечно не буду
+<script type="text/javascript" src="../js/bootstrap.js"></script>
 </body>
 </html>
