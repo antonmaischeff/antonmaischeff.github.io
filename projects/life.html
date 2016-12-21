@@ -3,27 +3,17 @@
 <head>
 	<title>life</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
 	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
 </head>
 <body>
 
-<div class="container starter-template marg" role="main">
-	<div class="jumbotron">
-		<p id="fill"></p>
-		<p>
-			<button type="button" class="btn btn-lg btn-primary">
-				сделать ход
-			</button>
-		</p>
-	</div>
-</div>
 
-
-
-
-
-
+<pre>
+	<div id="area"></div>
+</pre>
+<button class="bu">сделать ход</button>
+<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
 <script type="text/javascript">
 
 var	plan = ["############################",
@@ -46,26 +36,23 @@ WORLD.plan = plan;
 //метод вывода
 WORLD.toString = function(){
 
-
-	var m="";
-	for(num in WORLD.plan){
-		m += (m + WORLD.plan[num] + "<br>");
-	}
-	return m;
+return WORLD.plan.join("\n");
 };
 //сделать ход. производит действия, и перерисовывает мир
-WORLD.turn = function(){};
+WORLD.turn = function(){
+	$("#area").html(WORLD.toString());
+};
 
 
 
 
+$("bu").click(WORLD.turn());
 
-$("#fill").html(WORLD.toString());
+
 
 
 
 </script>
-чет тут поламалось,  но чинить его сегодня я конечно не буду
-<script type="text/javascript" src="../js/bootstrap.js"></script>
+
 </body>
 </html>
