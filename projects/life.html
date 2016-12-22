@@ -43,15 +43,34 @@ WORLD.turn = function(){
 	$("#area").html(WORLD.toString());
 };
 
+//vector
 
+function Vector(x, y){
+	this.x=x;
+	this.y=y;
+}
 
+Vector.prototype.plus = function (other) {
+	return new Vector(this.x + other.x, this.y + other.y);
+};
+//объект мировой сетки, потом разберусь, зачем он нужен.
 
+function Grid(width, height){
+	this.width = width;
+	this.height = height;
+}
+Grid.prototype.isInside(vector){
+	return vector.x >= 0 && vector.y >= 0 && vector.x < this.width && vector.y < this.height;
+}
+Grid.prototype.get	=	function(vector)	{
+		return	this.space[vector.x	+	this.width	*	vector.y];
+};
+Grid.prototype.set	=	function(vector,	value)	{
+		this.space[vector.x	+	this.width	*	vector.y]	=	value;
+};
+
+//call event
 $("bu").click(WORLD.turn());
-
-
-
-
-
 </script>
 
 </body>
